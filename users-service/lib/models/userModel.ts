@@ -5,7 +5,7 @@ const Schema = mongoose.Schema;
 export const UserSchema = new Schema({
   lastName: {
     type: String,
-  }, 
+  },
   firstName: {
     type: String,
   },
