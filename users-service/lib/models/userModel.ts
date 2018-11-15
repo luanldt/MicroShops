@@ -15,7 +15,7 @@ export const UserSchema = new Schema({
   email: {
     type: String,
   },
-  birthDay: {
+  birthday: {
     type: Date,
   },
   gender: {
@@ -29,6 +29,7 @@ export const UserSchema = new Schema({
   },
   deleted: {
     type: Boolean,
+    default: false
   },
   createdAt: {
     type: Date,
@@ -39,14 +40,12 @@ export const UserSchema = new Schema({
   },
   updatedAt: {
     type: Date,
-    default: Date.now,
   },
   updatedBy: {
     type: String,
   },
   deletedAt: {
     type: Date,
-    default: Date.now,
   },
   deletedBy: {
     type: String,
