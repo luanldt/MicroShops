@@ -3,7 +3,6 @@ import { buildSchema } from 'graphql';
 import { UserController } from '../controllers/userController';
 import { userSchema } from '../schemas/userSchema';
 
-
 const schema = buildSchema(userSchema);
 
 export class Routes {
@@ -26,6 +25,4 @@ export class Routes {
       graphiql: true
     }));
   }
-
-
 }
