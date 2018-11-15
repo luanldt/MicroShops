@@ -4,27 +4,27 @@ import { UserSchema } from '../models/userModel';
 const User = mongoose.model('User', UserSchema);
 
 export class UserController {
-  public async findOne({id}) {
+  public async findOne({ id }) {
     const res = await User.findById(id);
     return res;
   }
 
-  public async create({user}) {
+  public async create({ user }) {
     const newUser = new User(user);
 
     const res = await newUser.save();
     return res;
   }
 
-  public async listAll({shopId}) {
-    return await User.find({shopId: shopId});
+  public async listAll({ shopId }) {
+    return await User.find({ shopId: shopId });
   }
 
-  public async update({id, user}) {
-    return await User.findOneAndUpdate({_id: id}, user, { new: true });
+  public async update({ id, user }) {
+    return await User.findOneAndUpdate({ _id: id }, user, { new: true });
   }
 
-  public async delete({id}) {
-    return await User.findOneAndUpdate({_id: id}, {deleted: true}, { new: true });
+  public async delete({ id }) {
+    return await User.findOneAndUpdate({ _id: id }, { deleted: true }, { new: true });
   }
 }
