@@ -1,6 +1,6 @@
 export const shopSchema = `
-scalar Date,
-input ShopInput {
+  scalar Date,
+  input ShopInput {
     Id:                 String
     shopName:               String
     shopAddress:            String

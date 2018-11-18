@@ -5,7 +5,7 @@ import { userSchema } from '../schemas/userSchema';
 
 const schema = buildSchema(userSchema);
 
-export class Routes {
+export class UserRoutes {
 
   public userController: UserController = new UserController();
 

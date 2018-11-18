@@ -5,7 +5,7 @@ import { shopSchema } from '../schemas/shopSchema';
 
 const schema = buildSchema(shopSchema);
 
-export class Routes {
+export class ShopRoutes {
     public shopController: ShopController = new ShopController();
 
     public routes(app): void {
@@ -25,3 +25,4 @@ export class Routes {
         }));
     }
 }
+
