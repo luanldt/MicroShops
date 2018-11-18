@@ -4,6 +4,7 @@ export const userSchema = `
     lastName:     String
     firstName:    String!
     phone:        String!
+    password:     String!
     email:        String
     birthday:     Date
     gender:       String

@@ -27,4 +27,8 @@ export class UserController {
   public async delete({ id }) {
     return await User.findOneAndUpdate({ _id: id }, { deleted: true }, { new: true });
   }
+
+  public async getUser(username: String, password: String) {
+    return await User.findOne({ $or: [{ email: username }, { phone: username }], password });
+  }
 }
