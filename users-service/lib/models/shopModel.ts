@@ -16,7 +16,16 @@ export const ShopSchema = new Schema({
         street: {
             type: String
         },
+        ward: {
+            type: String
+        },
         district: {
+            type: String
+        },
+        city: {
+            type: String
+        },
+        country: {
             type: String
         }
     },
